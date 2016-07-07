@@ -13,12 +13,10 @@ module.exports = {};
 
 var loadedModules = [
     require("./widget_ngl"),
+    require("./ngl"),
     require("./chroma.min"),
-    require("./embed"),
-    require("./extension"),
     require("./mmtf-decode"),
     require("./msgpack-decode"),
-    require("./ngl"),
     require("./pako_inflate.min"),
     require("./promise.min"),
     require("./signals.min"),
