@@ -1,6 +1,6 @@
 {
   "name": "nglview",
-  "version": "0.6",
+  "version": "0.5.2",
   "description": "nglview",
   "author": "arose",
   "main": "src/index.js",

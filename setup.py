@@ -121,13 +121,12 @@ setup_args = {
     'include_package_data': True,
     'package_data': {
          "nglview.datafiles": ["*"],
-         "nglview.js": ["*"],
          "nglview.scripts": ["*"],
          "nglview.theme": ["*"]
      },
-    # 'entry_points': {'console_scripts':
-    #       ['nglview = nglview.scripts.nglview:main',]
-    # },
+    'entry_points': {'console_scripts':
+          ['nglview = nglview.scripts.nglview:main',]
+    },
     'data_files': [
         ('share/jupyter/nbextensions/nglview', [
             'nglview/static/extension.js',

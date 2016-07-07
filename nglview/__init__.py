@@ -1581,30 +1581,6 @@ class ComponentViewer(object):
                 traj_att = getattr(traj, attname)
                 setattr(self, attname, traj_att) 
         
-def install(user=True, symlink=False):
-    """Install the widget nbextension.
-
-    Parameters
-    ----------
-    user: bool
-        Install for current user instead of system-wide.
-    symlink: bool
-        Symlink instead of copy (for development).
-    """
-    staticdir = resource_filename('nglview', 'js')
-    install_nbextension(staticdir, destination='nglview',
-                        user=user, symlink=symlink,
-                        verbose=0)
-
-    cm = ConfigManager()
-    cm.update('notebook', {
-        "load_extensions": {
-            "widgets/notebook/js/extension": True,
-        }
-    })
-
-install(symlink=False)
-
 from ._version import get_versions
 __version__ = get_versions()['version']
 del get_versions
