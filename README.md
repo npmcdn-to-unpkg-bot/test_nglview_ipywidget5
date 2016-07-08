@@ -1,7 +1,7 @@
 nglview
-===============================
+=======
 
-test
+For testing only.
 
 Installation
 ------------
