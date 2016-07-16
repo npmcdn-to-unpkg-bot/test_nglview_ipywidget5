@@ -12,6 +12,8 @@ var TypedFastBitSet = require('./TypedFastBitSet');
 var NGL = require('./ngl');
 
 
+window.THREE = THREE
+
 var NGLView = widgets.WidgetView.extend({
 
     render: function(){

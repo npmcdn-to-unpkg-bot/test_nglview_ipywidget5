@@ -129,9 +129,9 @@ setup_args = {
     },
     'data_files': [
         ('share/jupyter/nbextensions/nglview', [
-            'nglview/static/extension.js',
-            'nglview/static/index.js',
-            'nglview/static/index.js.map',
+         'nglview/static/extension.js',
+         'nglview/static/index.js',
+         'nglview/static/index.js.map',
         ]),
     ],
     'install_requires': [
