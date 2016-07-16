@@ -1,18 +1,6 @@
 var widgets = require('jupyter-js-widgets');
-var THREE = require('./three.custom.min');
-var Promise = require('./promise.min');
-var sprintf = require('./sprintf.min');
-var pako = require('./pako_inflate.min');
-var chroma = require('./chroma.min');
-var jsfeat = require('./svd.min');
-var signals = require('./signals.min');
-var msgpackDecode = require('./msgpack-decode');
-var mmtfDecode = require('./mmtf-decode');
-var TypedFastBitSet = require('./TypedFastBitSet');
 var NGL = require('./ngl');
 
-
-window.THREE = THREE
 
 var NGLView = widgets.WidgetView.extend({
 
