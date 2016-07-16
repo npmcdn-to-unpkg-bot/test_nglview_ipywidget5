@@ -911,7 +911,7 @@ define(["jupyter-js-widgets"], function(__WEBPACK_EXTERNAL_MODULE_2__) { return 
 /***/ function(module, exports) {
 
 	module.exports = {
-		"name": "nglview",
+		"name": "nglview-js",
 		"version": "0.5.2",
 		"description": "nglview",
 		"author": "arose",
