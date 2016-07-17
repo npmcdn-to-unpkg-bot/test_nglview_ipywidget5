@@ -537,10 +537,10 @@ class MDAnalysisTrajectory(Trajectory, Structure):
 
 class NGLWidget(widgets.DOMWidget):
     _view_name = Unicode("NGLView").tag(sync=True)
-    _view_module = Unicode("nbextensions/nglview/widget_ngl").tag(sync=True)
+    _view_module = Unicode("nglview-js").tag(sync=True)
     selection = Unicode("*").tag(sync=True)
     _image_data = Unicode().tag(sync=True)
-    background = Unicode().tag(sync=True)
+    background = Unicode('white').tag(sync=True)
     loaded = Bool(False).tag(sync=True)
     frame = Int().tag(sync=True)
     # hack to always display movie
