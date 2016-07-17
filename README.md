@@ -17,6 +17,9 @@ If you want to update ./js/ folder, make sure to add `--npm`
     $ python setup.py install --npm
 
  
-Run demo notebook in this folder
+Run demo
+--------
 
+```bash
     jupyter notebook demo.ipynb
+```
