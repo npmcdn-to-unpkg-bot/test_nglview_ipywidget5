@@ -5,8 +5,5 @@ build/
 *.py[cod]
 node_modules/
 
-# Compiled javascript
-nglview/static/
-
 # OS X
 .DS_Store

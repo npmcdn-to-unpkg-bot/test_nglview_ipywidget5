@@ -12,18 +12,8 @@ __webpack_public_path__ = document.querySelector('body').getAttribute('data-base
 module.exports = {};
 
 var loadedModules = [
-    require("./widget_ngl"),
-    require("./ngl"),
-    require("./chroma.min"),
-    require("./mmtf-decode"),
-    require("./msgpack-decode"),
-    require("./pako_inflate.min"),
-    require("./promise.min"),
-    require("./signals.min"),
-    require("./sprintf.min"),
-    require("./svd.min"),
-    require("./three.custom.min"),
-    require("./TypedFastBitSet"),
+    require("./widget_ngl.js"),
+    //require("./ngl.js"),
 ]
 
 for (var i in loadedModules) {

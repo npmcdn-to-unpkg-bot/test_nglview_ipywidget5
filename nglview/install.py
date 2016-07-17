@@ -2,7 +2,7 @@ import argparse
 from os.path import dirname, abspath, join
 from notebook.nbextensions import install_nbextension
 
-def install(user=False, symlink=False, overwrite=False, **kwargs):
+def install(user=True, symlink=False, overwrite=True, **kwargs):
     """Install the bqplot nbextension.
     
     Parameters
@@ -16,7 +16,7 @@ def install(user=False, symlink=False, overwrite=False, **kwargs):
     **kwargs: keyword arguments
         Other keyword arguments passed to the install_nbextension command
     """
-    directory = join(dirname(abspath(__file__)), 'nbextension')
+    directory = join(dirname(abspath(__file__)), 'static')
     install_nbextension(directory, destination='nglview',
                         symlink=symlink, user=user, overwrite=overwrite,
                         **kwargs)

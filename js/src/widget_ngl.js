@@ -1,18 +1,6 @@
-var widgets = require('jupyter-js-widgets');
-var THREE = require('./three.custom.min');
-var Promise = require('./promise.min');
-var sprintf = require('./sprintf.min');
-var pako = require('./pako_inflate.min');
-var chroma = require('./chroma.min');
-var jsfeat = require('./svd.min');
-var signals = require('./signals.min');
-var msgpackDecode = require('./msgpack-decode');
-var mmtfDecode = require('./mmtf-decode');
-var TypedFastBitSet = require('./TypedFastBitSet');
+var widgets = require("jupyter-js-widgets");
 var NGL = require('./ngl');
 
-
-window.THREE = THREE
 
 var NGLView = widgets.WidgetView.extend({
 
@@ -112,7 +100,7 @@ var NGLView = widgets.WidgetView.extend({
             .css( "padding", "2px 5px 2px 5px" )
             .css( "opacity", "0.7" )
             .appendTo( this.$container );
-        this.stage.signals.onPicking.add( function( pd ){
+        this.stage.signals.clicked.add( function( pd ){
             var pd2 = {};
             if( pd.atom ) pd2.atom = pd.atom.toObject();
             if( pd.bond ) pd2.bond = pd.bond.toObject();
@@ -581,5 +569,6 @@ var NGLView = widgets.WidgetView.extend({
 })
 
 module.exports = {
-    NGLView: NGLView
+    NGLView: NGLView,
+    NGL: NGL
 }
