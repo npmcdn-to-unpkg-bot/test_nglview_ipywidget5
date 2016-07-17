@@ -24,6 +24,12 @@ log.info('$PATH=%s' % os.environ['PATH'])
 
 LONG_DESCRIPTION = 'test'
 
+try:
+    sys.argv.remove('--npm')
+    rebuild_nglview_js = True
+except ValueError:
+    rebuild_nglview_js = False
+
 def js_prerelease(command, strict=False):
     """decorator for building minified js/css prior to another command"""
     class DecoratedCommand(command):
@@ -86,7 +92,7 @@ class NPM(Command):
     def should_run_npm_install(self):
         package_json = os.path.join(node_root, 'package.json')
         node_modules_exists = os.path.exists(self.node_modules)
-        return self.has_npm()
+        return self.has_npm() and rebuild_nglview_js
 
     def run(self):
         has_npm = self.has_npm()
