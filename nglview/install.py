@@ -1,6 +1,6 @@
 import argparse
 from os.path import dirname, abspath, join
-from notebook.nbextensions import install_nbextension
+from notebook.nbextensions import install_nbextension, enable_nbextension
 
 def install(user=True, symlink=False, overwrite=True, **kwargs):
     """Install the bqplot nbextension.
@@ -21,6 +21,9 @@ def install(user=True, symlink=False, overwrite=True, **kwargs):
                         symlink=symlink, user=user, overwrite=overwrite,
                         **kwargs)
 
+def enable_nglview_js():
+    enable_nbextension('nglview-js', '')
+
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="nglview")
@@ -35,3 +38,4 @@ if __name__ == '__main__':
                         action="store_true")
     args = parser.parse_args()
     install(user=args.user, symlink=args.symlink, overwrite=args.force)
+    enable_nglview_js()

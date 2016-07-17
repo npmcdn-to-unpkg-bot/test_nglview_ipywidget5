@@ -1,6 +1,10 @@
 
 from __future__ import print_function, absolute_import
 
+from .install import install, enable_nglview_js
+install()
+enable_nglview_js()
+
 from . import datafiles
 from .utils import seq_to_string, string_types, _camelize, _camelize_dict
 from .utils import FileManager
