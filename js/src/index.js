@@ -12,8 +12,7 @@ __webpack_public_path__ = document.querySelector('body').getAttribute('data-base
 module.exports = {};
 
 var loadedModules = [
-    require("./widget_ngl.js"),
-    //require("./ngl.js"),
+    require("./nglview-js.js"),
 ]
 
 for (var i in loadedModules) {
